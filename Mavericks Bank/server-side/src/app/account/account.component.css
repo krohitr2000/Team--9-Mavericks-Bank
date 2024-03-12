@@ -1,0 +1,118 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.account-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+
+.account-box h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+    text-transform: uppercase; 
+}
+
+
+.account-box p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2em; 
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px; 
+    font-size: 1.2em; 
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+
+.balance-info {
+    color: black;
+    font-size: 1.2em; 
+}
+
+
+.loan-table {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    margin-top: 20px; 
+}
+
+
+.loan-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.loan-table th,
+.loan-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.loan-table th {
+    background-color: #f2f2f2;
+}
+
+.toggle-input:checked ~ .loan-table {
+    display: block;
+}
+
+
+h2, h3 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #007bff;
+    margin-bottom: 20px; 
+}
+
+.backgrond-setter{
+    background-image: url(/../assets/Images/background1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    height: 100vh;
+  }

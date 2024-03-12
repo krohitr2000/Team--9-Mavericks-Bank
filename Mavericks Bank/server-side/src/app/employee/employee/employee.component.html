@@ -1,0 +1,128 @@
+<div class="back" *ngIf="authenticate()">
+<div class="actions-container">
+    <div class="container">
+        <h2>Accounts for approval</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Account ID</th>
+              <th>Account Type</th>
+              <th>Customer ID</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let account of createdAccounts">
+              <td>{{ account.accountId }}</td>
+              <td>{{ account.accountType }}</td>
+              <td>{{ account.customerId }}</td>
+              <td>
+                <button (click)="approveNewCustomerAccount(account.accountId)" class="approve-button">Approve</button>
+                <button (click)="disapproveNewCustomerAccount(account.accountId)" class="disapprove-button">Disapprove</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+      
+    <div class="container">
+        <h2>Accounts to close</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Account ID</th>
+              <th>Account Type</th>
+              <th>Customer ID</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let account of deletedAccounts">
+              <td>{{ account.accountId }}</td>
+              <td>{{ account.accountType }}</td>
+              <td>{{ account.customerId }}</td>
+              <td>
+                <button (click)="approveCloseCustomerAccount(account.accountId)" class="approve-button">Approve</button>
+                <button (click)="disapproveCloseCustomerAccount(account.accountId)" class="disapprove-button">Disapprove</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+  <div class="container">
+      <h2>Accounts</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Account ID</th>
+            <th>Account Type</th>
+            <th>Customer ID</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let account of accounts">
+            <td>{{ account.accountId }}</td>
+            <td>{{ account.accountType }}</td>
+            <td>{{ account.customerId }}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+  <div class="container">
+    <h2>Transactions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Sender ID</th>
+          <th>Receiver ID</th>
+          <th>Transaction Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{ transaction.transactionId }}</td>
+          <td>{{ transaction.senderAccountId }}</td>
+          <td>{{ transaction.recieverAccountId }}</td>
+          <td>{{ transaction.transactionType }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="container">
+    <h2>Loan</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Loan ID</th>
+          <th>Loan Type</th>
+          <th>Account ID</th>
+          <th>Loan Amount</th>
+          <th>Loan Status</th>
+          <th>Action</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let loan of loans">
+          <td>{{ loan.loanId }}</td>
+          <td>{{ loan.loanType }}</td>
+          <td>{{ loan.accountId}}</td>
+          <td>{{ loan.loanAmount }}</td>
+          <td>{{ loan.loanStatus }}</td>
+          <td>
+            <button (click)="approveLoan(loan.loanId)" class="approve-button">Approve</button>
+            <!-- <button (click)="disapproveLoan(loan.loanId)" class="disapprove-button">Disapprove</button> -->
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <button (click)="generateReports()">Generate Reports</button>
+</div>
+</div>

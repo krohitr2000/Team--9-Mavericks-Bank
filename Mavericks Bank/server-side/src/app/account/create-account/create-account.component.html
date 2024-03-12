@@ -1,0 +1,57 @@
+<div class="backgrond-setter" *ngIf="authenticate()">
+<h2>New Account</h2>
+<form class="account-form" #accountForm="ngForm" (ngSubmit)="onSubmit(accountForm)">
+    <input type="hidden" name="Id" [value]="objservice.accountData.accountId">
+    <input type="hidden" name="customerId" [value]="customerId">
+    <div class="all-group">
+
+        <div class="form-group">
+            <label for="accountType">Account Type</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-credit-card"></i>
+                    </div>
+                </div>
+                <select class="custom-select" id="accountType" name="accountType" [(ngModel)]="objservice.accountData.accountType" required>
+                    <option selected disabled>Choose...</option>
+                    <option value="savings">Savings Account</option>
+                    <option value="personal">Personal Account</option>
+                    <option value="salary">Salary Account</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="balance">Minimum Balance (Rs)</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-money"></i>
+                    </div>
+                </div>
+                <input type="number" class="form-control" id="balance" name="balance" [(ngModel)]="objservice.accountData.balance" min="500" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="branch">Branch</label>
+            <select class="custom-select" id="branch" name="branch" [(ngModel)]="selectedBranch" (change)="onBranchChange(selectedBranch)" required>
+                <option selected disabled>Choose...</option>
+                <option value="Pune">Pune</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Sangli">Sangli</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ifscCode">IFSC Code</label>
+            <input type="text" class="form-control" id="ifscCode" name="ifscCode" [(ngModel)]="objservice.accountData.ifscCode" required="">
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Create Account</button>
+</form>
+</div>

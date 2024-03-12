@@ -1,0 +1,22 @@
+/* styles.css */
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto; /* Center the table */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Border style */
+    padding: 8px; /* Padding for content */
+    text-align: center; /* Align text to the center */
+}
+
+th {
+    background-color: #f2f2f2; /* Background color for table header */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
+}

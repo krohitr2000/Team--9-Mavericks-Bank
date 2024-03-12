@@ -1,0 +1,72 @@
+<div class="backgrond-setter">
+    <div class="container">
+        <h2 style="background-color: blueviolet; color: white;">Welcome to Mavericks Bank</h2>
+        <h3 class="tagline" style="color: white; font-size: medium;">Banking Made Easy</h3>
+      
+        <!-- Account Types Section -->
+        <div class="row mt-4">
+            <!-- Left column -->
+            <div class="col-md-6">
+                <!-- View Account Balance -->
+                <div class="account-box view-balance">
+                    <h4>View Account Balance</h4>
+                    <p>View your account balance.</p>
+                    <button (click)="viewAccountBalance()" class="btn btn-primary">View Balance</button>
+                    <p *ngIf="accountBalance !== null && showAccountBalance" class="balance-info">Remaining Account Balance: {{ accountBalance }}</p>
+                </div>
+                
+                <!-- Loan Details -->
+                <div class="account-box loan-details">
+                    <h4>Loan Details</h4>
+                    <p>Click to view loan details.</p>
+                    <input type="checkbox" id="loan-toggle" class="toggle-input">
+                    <label for="loan-toggle" class="toggle-label">Show Loan Details</label>
+                    <div class="loan-table">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Loan Id</th>
+                                    <th>Loan Amount</th>
+                                    <th>Loan Type</th>
+                                    <th>Loan Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let loan of loans">
+                                    <td>{{loan.loanId}}</td>
+                                    <td>{{loan.loanAmount}}</td>
+                                    <td>{{loan.loanType}}</td>
+                                    <td>{{loan.loanStatus}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Delete Account -->
+                <div class="account-box delete-account">
+                    <h4>Delete Account</h4>
+                    <p>Delete your account with us.</p>
+                    <button (click)="deleteAccount(accountId)" class="btn" style="background-color: red; color: white;">Delete Account</button>
+                </div>
+            </div>
+
+            <!-- Right column -->
+            <div class="col-md-6">
+                <!-- Apply for Loan -->
+                <div class="account-box apply-loan">
+                    <h4>Apply for Loan</h4>
+                    <p>Apply for a loan with us.</p>
+                    <a [routerLink]="['/loan-plans',accountId]" class="btn btn-primary">Apply Now</a>
+                </div>
+                
+                <!-- Make Transaction -->
+                <div class="account-box make-transaction">
+                    <h4>Make Transaction</h4>
+                    <p>Make transactions with your account.</p>
+                    <a [routerLink]="['/transaction',accountId]" class="btn btn-primary">Go to Transactions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="backgrond-setter" style="padding-top: 2rem;">
+    <h3>Your Account Details</h3>
+    <div class="table-container">
+        <table class="table table-hover text-bg-primary">
+            <thead>
+                <tr>
+                    <th>Account ID</th>
+                    <th>Account Type</th>
+                    <th>View Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let acc of approvedList">
+                    <td>{{acc.accountId}}</td>
+                    <td>{{acc.accountType}}</td>
+                    <td>
+                        <a class="view-details-btn" (click)="redirectToAccountDetails(acc.accountId)">
+                            <i class="fa fa-eye"></i> View Details
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>To view more details click on icon in view details section</p>
+</div>

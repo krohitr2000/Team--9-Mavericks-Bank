@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    
+}
+
+.faltucha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.registration-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 350px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group-text {
+    background-color: #fff;
+    border: 1px solid #ced4da;
+}
+
+.input-group-text i {
+    color: #888;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+.green-icon {
+    color: green;
+}
+
+.red-icon {
+    color: red;
+}
+h2{
+    background-color: rgb(44, 89, 148);
+    color: #fff;
+    font-family: 'Franklin Gothic Medium';
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+.back{
+    background-image:url('/../assets/Images/signupbackground.jpg') ;
+}

@@ -1,0 +1,66 @@
+.home-loan {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.car-loan {
+    background-color: #d3d3d3;
+    color: #000;
+}
+
+.education-loan {
+    background-color: #add8e6;
+    color: #00008b;
+}
+
+.personal-loan {
+    background-color: #90ee90;
+    color: #006400;
+}
+
+.agricultural-loan {
+    background-color: #ffd700;
+    color: #8b4513;
+}
+
+.loan-card {
+    margin-top: 20px;
+}
+
+.loan-card:hover {
+    transform: translateY(-5px);
+}
+
+.loan-details {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.loan-card:hover .loan-details {
+    display: block;
+}
+.education-loan {
+    background-color: #add8e6;
+    color: #00008b;
+}
+.car-loan {
+    background-color: #ffe4b5;
+    color: #8b4513;
+}
+.agricultural-loan {
+    background-color: #c3e6cb;
+    color: #155724;
+}
+.personal-loan {
+    background-color: #ffeeba;
+    color: #856404;
+}
+.backgrond-setter{
+    background-image: url(/../assets/Images/homeback.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    height: 200vh;
+  }

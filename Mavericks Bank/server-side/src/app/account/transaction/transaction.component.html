@@ -1,0 +1,84 @@
+
+<div class="backgrond-setter">
+    <div class="container">
+        <h2>Transactions at your fingertips</h2>
+        <h3 class="tagline">Banking Made Easy</h3>
+      
+        <!-- Transaction Services Section -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="transaction-box blue-box">
+                    <div class="box">
+                        <button class="button" (click)="showDepositForm()">
+                            <i class="bi bi-currency-rupee"></i>
+                            Deposit
+                        </button>
+                        <p>Deposit money into your account</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="transaction-box green-box">
+                    <div class="box">
+                        <button class="button" (click)="showWithdrawForm()">
+                            <i class="bi bi-cash-stack"></i>
+                            Withdraw
+                        </button>
+                        <p>Withdraw money from your account</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="transaction-box blue-box">
+                    <div class="box">
+                        <button class="button" (click)="showTransferForm()">
+                            <i class="bi bi-arrow-right-circle-fill"></i>
+                            Transfer
+                        </button>
+                        <p>Transfer money to another account</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="transaction-box green-box">
+                    <div class="box">
+                        <button class="button" [routerLink]="['/transaction-history',accountId]">
+                            <i class="bi bi-clock-history"></i>
+                            Transaction History
+                        </button>
+                        <p>View your transaction history</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="forms">
+        <div *ngIf="showDeposit" class="form">
+            <div class="inner-form-box deposit-box">
+                <h3><i class="bi bi-currency-rupee"></i> Deposit</h3>
+                <input type="number" [(ngModel)]="depositAmount" placeholder="Enter amount">
+                <button class="inner-button" (click)="deposit()">Deposit</button>
+            </div>
+        </div>
+    
+        <div *ngIf="showWithdraw" class="form">
+            <div class="inner-form-box withdraw-box">
+                <h3><i class="bi bi-cash-stack"></i> Withdraw</h3>
+                <input type="number" [(ngModel)]="withdrawAmount" placeholder="Enter amount">
+                <button class="inner-button" (click)="withdraw()">Withdraw</button>
+            </div>
+        </div>
+    
+        <div *ngIf="showTransfer" class="form">
+            <div class="inner-form-box transfer-box">
+                <h3><i class="bi bi-arrow-right-circle-fill"></i> Transfer</h3>
+                <input type="text" [(ngModel)]="transferAccountId" placeholder="Recipient Account ID">
+                <input type="number" [(ngModel)]="transferAmount" placeholder="Transfer Amount">
+                <button class="inner-button" (click)="transfer()">Transfer</button>
+            </div>
+        </div>
+    </div>
+</div>

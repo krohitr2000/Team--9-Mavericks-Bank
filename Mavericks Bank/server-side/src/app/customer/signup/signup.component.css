@@ -1,0 +1,16 @@
+/* Styles for Signup Component */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Icons Color */
+  .input-group-text .bi {
+    color: green; /* Default icon color */
+  }
+  
+  /* Invalid Input Style */
+  .invalid-feedback {
+    color: red;
+  }
+  

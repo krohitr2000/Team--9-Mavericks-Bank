@@ -1,0 +1,19 @@
+<table *ngIf="authenticate()">
+    <thead>
+      <tr>
+        <th>Transaction Id</th>
+        <th>Transaction Type</th>
+        <th>Transaction Amount</th>
+        <th>Account ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactionHistory">
+        <td>{{ transaction.transactionId }}</td>
+        <td>{{ transaction.transactionType }}</td>
+        <td>{{ transaction.transactionAmount }}</td>
+        <td>{{ transaction.accountId || '' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

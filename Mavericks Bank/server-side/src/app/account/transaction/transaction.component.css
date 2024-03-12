@@ -1,0 +1,128 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+
+h2 {
+    background-color: blueviolet;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.tagline {
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 1.2em;
+    margin-bottom: 2rem;
+}
+
+
+.transaction-box {
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.blue-box {
+    background-color: #ce246e;
+    color: #fff;
+}
+
+.green-box {
+    background-color: #268abf;
+    color: #fff;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff; 
+    color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #f0f0f0;
+}
+
+
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+}
+
+.form {
+    margin: 0 auto;
+}
+
+
+.inner-form-box {
+    margin-top: -20rem;
+    margin-bottom: 2rem;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+
+.deposit-box {
+    color: white;
+    background-color: #2d5980;
+}
+
+.withdraw-box {
+    color: white;
+    background-color: #2d5980;
+}
+
+.transfer-box {
+    color: white;
+    background-color: #2d5980;
+}
+
+
+.inner-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #1deea1;
+    color: #1b1717;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.inner-button:hover {
+    background-color: #17a673; 
+}
+.backgrond-setter{
+    background-image: url(/../assets/Images/backimg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+
+    height: 200vh;
+  }

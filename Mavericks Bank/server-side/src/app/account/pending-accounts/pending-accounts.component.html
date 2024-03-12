@@ -1,0 +1,22 @@
+<div class="backgrond-setter" style="margin-top: -2rem; padding-top: 3rem;">
+    <div class="container" *ngIf="authenticate()">
+        <h3 class="logo">Pending Account's Section</h3>
+        <p class="tagline">Thank you for choosing us, We will approve your account shortly</p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account ID</th>
+                        <th>Account Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let acc of pendingList">
+                        <td>{{acc.accountId}}</td>
+                        <td>{{acc.accountType}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

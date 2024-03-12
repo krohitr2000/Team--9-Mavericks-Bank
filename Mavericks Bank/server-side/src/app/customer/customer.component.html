@@ -1,0 +1,69 @@
+<div class="backgrond-setter">
+<div class="container " *ngIf="authenticate()">
+    <h2>Welcome to Mavericks Bank</h2>
+    <h3 class="tagline">Banking Made Easy</h3>
+  
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h4 class="service">Explore wide range of account services that we provide</h4>
+        <div class="account-type">
+          <div class="account-box personal-account">
+            <h4>Personal Account</h4>
+            <ul>
+              <li>ATM Card</li>
+              <li>Online Banking</li>
+              <li>Mobile Banking</li>
+            </ul>
+          </div>
+          <div class="account-box savings-account">
+            <h4>Savings Account</h4>
+            <ul>
+              <li>Interest on Savings</li>
+              <li>Free Fund Transfers</li>
+              <li>Account Statements</li>
+            </ul>
+          </div>
+          <div class="account-box current-account">
+            <h4>Current Account</h4>
+            <ul>
+              <li>Overdraft Facility</li>
+              <li>Business Banking Services</li>
+              <li>Customized Solutions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Create New Account</h5>
+            <p class="card-text">Open a new account with us.</p>
+            <a [routerLink]="['/create-account' ,customerId]" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Create Account</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">View Account Details</h5>
+            <p class="card-text">View details of your existing accounts.</p>
+            <a [routerLink]="['/display-account' ,customerId]"class="btn btn-info"><i class="fa fa-eye"></i> View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Pending Account Requests</h5>
+            <p class="card-text">Review your pending account requests</p>
+            <a [routerLink]="['/pending-accounts' ,customerId]"class="btn btn-success"><i class="fa fa-eye"></i> View Pending requests</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

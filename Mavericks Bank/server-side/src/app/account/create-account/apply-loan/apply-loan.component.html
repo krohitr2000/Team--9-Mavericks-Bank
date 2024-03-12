@@ -1,0 +1,30 @@
+
+<div class="container" *ngIf="authenticate()">
+  <h2>Apply for a Loan</h2>
+  <form #loanForm="ngForm" (ngSubmit)="onSubmit(loanForm)">
+    <div class="form-group">
+      <label for="loanType">Loan Type:</label>
+      <input type="text" class="form-control" id="loanType" name="loanType" [(ngModel)]="loanType" disabled>
+    </div>
+    <div class="form-group">
+      <label for="fixedInterestRate">Fixed Interest Rate:</label>
+      <input type="text" class="form-control" id="fixedInterestRate" name="fixedInterestRate" [value]="fixedInterestRate" readonly>
+    </div>
+    <div class="form-group">
+      <label for="loanAmount">Loan Amount:</label>
+      <input type="number" class="form-control" id="loanAmount" name="loanAmount" [(ngModel)]="objservice.loanData.loanAmount" required>
+    </div>
+    <div class="form-group">
+      <label for="tenure">Tenure (in months):</label>
+      <input type="number" class="form-control" id="tenure" name="tenure" [(ngModel)]="objservice.loanData.tenure" required>
+    </div>
+    <div class="form-group">
+      <label for="loanStatus">Loan Status:</label>
+      <input type="text" class="form-control" id="loanStatus" name="loanStatus" [(ngModel)]="objservice.loanData.loanStatus" readonly>
+    </div>
+    <input type="hidden" name="approvalDate" [(ngModel)]="objservice.loanData.approvalDate">
+    <input type="hidden" name="disbursementDate" [(ngModel)]="objservice.loanData.disbursementDate">
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

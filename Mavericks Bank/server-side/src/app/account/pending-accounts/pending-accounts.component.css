@@ -1,0 +1,47 @@
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+
+th, td {
+    border: 1px solid #151010;
+    padding: 8px;
+    text-align: center;
+}
+td{
+    background-color: rgb(237, 222, 222);
+}
+
+th {
+    background-color: #ccbaba;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+.tagline {
+    font-style: oblique;
+    font-variant: small-caps;
+    color: white;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 2rem;
+    font-family: 'Times New Roman';
+    color: white;
+}
+.backgrond-setter{
+    background-image: url(/../assets/Images/backimage.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    height: 100vh;
+    
+  }

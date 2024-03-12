@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts Dashboard</title>
+    
+</head>
+<body>
+    <div class="back">
+    <div class="logo">
+        <h2>Mavericks Bank</h2>
+        <p>Employee Workspace</p>
+    </div>
+    <div class="container">
+        <div class="outer-box">
+            <div class="box-header">
+                <h2>Accounts for Approval</h2>
+                <div class="arrow"></div>
+            </div>
+            <div class="inner-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Account ID</th>
+                            <th>Account Type</th>
+                            <th>Customer ID</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let account of createdAccounts">
+                        <td>{{ account.accountId }}</td>
+                        <td>{{ account.accountType }}</td>
+                        <td>{{ account.customerId }}</td>
+                        <td>
+                            <button (click)="approveNewCustomerAccount(account.accountId)" class="approve-button">Approve</button>
+                            <button (click)="disapproveNewCustomerAccount(account.accountId)" class="disapprove-button">Disapprove</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="second-outer-box">
+        <div class="box-header">
+            <h2>Accounts to Close</h2>
+        </div>
+        <div class="second-inner-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account ID</th>
+                        <th>Account Type</th>
+                        <th>Customer ID</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                    <tr *ngFor="let account of deletedAccounts">
+                        <td>{{ account.accountId }}</td>
+                        <td>{{ account.accountType }}</td>
+                        <td>{{ account.customerId }}</td>
+                        <td>
+                            <button (click)="approveCloseCustomerAccount(account.accountId)" class="approve-button">Approve</button>
+                            <button (click)="disapproveCloseCustomerAccount(account.accountId)" class="disapprove-button">Disapprove</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="third-outer-box">
+            <div class="box-header">
+                <h2>All Accounts</h2>
+            </div>
+            <div class="third-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Account ID</th>
+                            <th>Account Type</th>
+                            <th>Customer ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let account of accounts">
+                            <td>{{ account.accountId }}</td>
+                            <td>{{ account.accountType }}</td>
+                            <td>{{ account.customerId }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+
+        <div class="fourth-outer-box">
+            <div class="box-header">
+                <h2>Transactions</h2>
+            </div>
+            <div class="fourth-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Sender ID</th>
+                            <th>Receiver ID</th>
+                            <th>Transaction Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let transaction of transactions">
+                            <td>{{ transaction.transactionId }}</td>
+                            <td>{{ transaction.senderAccountId }}</td>
+                            <td>{{ transaction.recieverAccountId }}</td>
+                            <td>{{ transaction.transactionType }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="arrow"></div>
+        </div>
+        
+
+        <div class="fifth-outer-box">
+            <div class="box-header">
+                <h2>Loan</h2>
+            </div>
+            <div class="fifth-box">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Loan ID</th>
+                        <th>Loan Type</th>
+                        <th>Account ID</th>
+                        <th>Loan Amount</th>
+                        <th>Loan Status</th>
+                        <th>Action</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let loan of loans">
+                        <td>{{ loan.loanId }}</td>
+                        <td>{{ loan.loanType }}</td>
+                        <td>{{ loan.accountId}}</td>
+                        <td>{{ loan.loanAmount }}</td>
+                        <td>{{ loan.loanStatus }}</td>
+                        <td>
+                            <button (click)="approveLoan(loan.loanId)" class="approve-button">Approve</button>
+                            <button (click)="disapproveLoan(loan.loanId)" class="disapprove-button">Disapprove</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="arrow"></div>
+    </div>
+
+    <script src="script.js"></script>
+    </div>
+</body>
+</html>
