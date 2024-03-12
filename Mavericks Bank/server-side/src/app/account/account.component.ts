@@ -33,11 +33,9 @@ export class AccountComponent {
       this.objservice.updateAccountStatus(accountId, 'tobedeleted').subscribe(
         (res) => {
           alert("Request for account deactivatin is raised")
-          // Handle success if needed
           console.log('Account status updated successfully.');
         },
         error => {
-          // Handle error if needed
           console.error('Error updating account status:', error);
         }
       );
@@ -51,7 +49,7 @@ export class AccountComponent {
     onBranchChange(branchName: string): void {
       this.objservice.getIFSCCodeByBranch(branchName).subscribe(
         ifsc => {
-          this.ifscCode = ifsc; // Update IFSC code
+          this.ifscCode = ifsc;
         },
         error => {
           console.error('Error fetching IFSC code:', error);
